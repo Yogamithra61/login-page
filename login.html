@@ -1,0 +1,92 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Login</title>
+    <style> 
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4
+        }
+        .login-container{
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+
+
+            margin-top: 200px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .login-container h2{
+            margin-bottom: 20px;
+            color: #333;
+
+        }
+        .login container input{
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+
+        }
+        .login-container label{
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        .login-container button{
+            background-color: blue;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .login-container button:hover{
+            background-color: #0056b3;
+
+        }
+        .message{
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    < div class="login-container">
+        <h2>Login Form</h2>
+            <label >Username:</label>
+            <input type="text" id="username" >
+            <label >Password:</label>
+            <input type="password" id="password">
+            <button type="submit" onclick="validatelogin()">Login</button>
+            <p id=""message></p>
+    
+</div>
+    <script>
+        function validatelogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const message = document.getElementById('message');
+            const defaultusername = 'admin';
+            const defaultpasssword = 'admin';
+            msg.textcontext='';
+            if (username == 'admin' && password == 'admin') {
+                message.textContent = 'Login successful!';
+                message.style.color = 'green';
+            } else {
+                message.textContent = 'Invalid username or password.';
+                message.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
